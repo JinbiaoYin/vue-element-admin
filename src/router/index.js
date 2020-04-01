@@ -395,6 +395,18 @@ export const asyncRoutes = [
       }
     ]
   },
+  {
+    path: '/flowable',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/flowable/index'),
+        name: 'index',
+        meta: { title: 'flowable', icon: 'international' }
+      }
+    ]
+  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
